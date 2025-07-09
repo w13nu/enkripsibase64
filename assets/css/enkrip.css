@@ -1,0 +1,702 @@
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  margin-bottom: 0;
+  background-color: #004080;
+  z-index: 9999;
+  border: 0;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  letter-spacing: 2px;
+  border-radius: 0;
+  transition: background-color 0.3s ease;
+}
+
+.navbar li a,
+.navbar .navbar-brand {
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+  color: #fff !important;
+  background-color: #00509e !important;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+
+/* Hero Section (Background Cover) */
+.bg-cover {
+  color: #fff;
+  background: url("../img/enkrip.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 180px 50px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column; /* Stack items vertically */
+}
+
+.bg-cover::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.bg-cover h1,
+.bg-cover p,
+.btn {
+  z-index: 2;
+  position: relative;
+  margin: 10px 0; /* Add margin between elements */
+}
+
+.bg-cover .btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Add space between buttons */
+}
+
+/* Modifikasi untuk Heading Utama */
+.bg-cover h1 {
+  color: #ffffff; /* Warna putih untuk teks */
+  font-size: 64px; /* Ukuran font lebih besar */
+  font-weight: bold; /* Membuat teks tebal */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Efek bayangan untuk membuat teks lebih jelas */
+  letter-spacing: 1.5px; /* Memberikan jarak antar huruf */
+  margin-bottom: 20px; /* Spasi bawah teks */
+}
+
+/* Modifikasi untuk subheading atau deskripsi */
+.bg-cover p {
+  color: #e0e0e0; /* Warna abu-abu muda untuk teks */
+  font-size: 20px; /* Ukuran font untuk deskripsi */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Efek bayangan untuk teks */
+  letter-spacing: 1px; /* Memberikan jarak antar huruf */
+  margin-bottom: 10px; /* Spasi bawah deskripsi */
+}
+
+/* Section Content */
+.bg-1 {
+  background-color: #f7f7f7;
+  color: #000;
+  padding: 60px 50px;
+  text-align: justify;
+}
+
+hr.botm-line {
+  height: 3px;
+  width: 60px;
+  background: #ff0066;
+  position: relative;
+  border: 0;
+  margin: 20px auto;
+}
+
+/* Panel Effects */
+.panel {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.panel:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.panel-heading {
+  color: #fff !important;
+  background-color: #1f3b4d !important;
+  padding: 20px;
+  border-bottom: none;
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn {
+  cursor: pointer;
+  border-radius: 50px;
+  text-decoration: none;
+  padding: 15px 30px;
+  transition: background-color 0.3s, transform 0.3s;
+  display: inline-block;
+  font-size: 16px;
+  position: relative; /* Ensure the button stays on top of other elements */
+  z-index: 2; /* Make sure it's above other elements */
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
+.purple {
+  color: #ffffff; /* Warna teks putih pada tombol */
+  background-color: #007bff; /* Warna latar tombol biru */
+  border: 2px solid transparent; /* Hilangkan border */
+}
+
+.purple:hover {
+  background-color: #0056b3; /* Ubah warna saat di-hover */
+}
+
+/* Input Styles */
+input[type="text"],
+textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%; /* Set width to 100% for responsiveness */
+  border-radius: 5px; /* Rounded corners */
+  margin: 10px 0; /* Margin between input and other elements */
+  z-index: 2; /* Ensure it's above other elements */
+  position: relative; /* Ensure it stays in context */
+}
+
+/* Specific Styles for Enkripsi and Dekripsi Section */
+.encryption-section,
+.decryption-section {
+  background-color: rgba(255, 255, 255, 0.9); /* Light background for better contrast */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0; /* Margin between sections */
+}
+
+.encryption-section h2,
+.decryption-section h2 {
+  color: #004080; /* Darker color for headings */
+  font-size: 24px; /* Larger font size for visibility */
+  margin-bottom: 15px; /* Space below heading */
+}
+
+/* New Styles for Result Output */
+.result-output {
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for better contrast */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px 0; /* Margin between sections */
+  position: relative;
+  z-index: 2; /* Ensure it's above other elements */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .bg-cover {
+    padding: 150px 30px;
+  }
+
+  .bg-cover h1 {
+    font-size: 40px;
+  }
+
+  .bg-cover p {
+    font-size: 16px;
+  }
+
+  .bg-1 {
+    padding: 60px 30px;
+  }
+}
+/* ======= Blockchain History Table Styles ======= */
+.table-custom {
+  table-layout: fixed;
+  width: 100%;
+  background-color: #0051cb;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-custom thead {
+  background-color: #0056b3;
+  color: white;
+}
+
+.table-custom thead th,
+.table-custom tbody td {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  text-align: center;
+  padding: 12px;
+}
+
+.table-custom tbody tr:hover {
+  background-color: rgba(0, 82, 171, 0.85);
+}
+
+.hash-truncate {
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.badge-info {
+  background-color: #17a2b8;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-action {
+  padding: 6px 10px;
+  font-size: 13px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-action:hover {
+  background-color: #0056b3;
+}
+
+.btn-action:hover {
+  background-color: #0056b3;
+}
+
+/* ======= Badge ======= */
+.badge-info {
+  background-color: #17a2b8;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* ======= Tooltip Custom ======= */
+.tooltip-custom {
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 300px;
+  text-align: center;
+}
+
+/* ======= Action Button Container ======= */
+@media screen and (max-width: 767px) {
+  .btn-action {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ======= Page Header ======= */
+.page-header {
+  margin-top: 60px;
+  color: white;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* ======= Alert ======= */
+.alert {
+  margin-top: 20px;
+}
+
+/* ======= Responsive Table ======= */
+.table-responsive {
+  overflow-x: auto;
+  min-height: 0.01%;
+}
+
+/* ======= Mobile Button Adjustment ======= */
+@media screen and (max-width: 767px) {
+  .btn-action {
+    width: 100%;
+    margin-bottom: 5px;
+    display: block;
+  }
+}
+
+/* ======= Detail Panel Styles ======= */
+.detail-panel .panel-heading {
+  background-color: #0056b3;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+.detail-panel .panel-body {
+  padding: 15px;
+}
+
+.detail-panel .row {
+  margin-bottom: 10px;
+}
+
+.hash-display {
+  word-break: break-word;
+  background-color: #f5f5f5;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+/* Password Show/Hide Icon */
+.password-container {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+  z-index: 1000;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+td {
+  vertical-align: middle !important;
+}
+
+.input-group-addon.toggle-password {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+/* dashboard login */
+.user-card {
+  background: rgba(50, 50, 50, 0.9);
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 0px;
+  text-align: center;
+  position: relative;
+  z-index: 50;
+}
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+.menu-button {
+  margin-bottom: 10px;
+  font-weight: 600;
+  padding: 10px;
+}
+.menu-button i {
+  margin-right: 8px;
+}
+
+/* header.php */
+.header-container {
+  background-color: rgba(52, 58, 64, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.profile-dropdown {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+}
+.profile-dropdown:hover,
+.profile-dropdown:focus {
+  color: #f8f9fa;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.profile-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+.profile-pic-lg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f8f9fa;
+}
+
+/* kelola_user */
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+.profile-detail {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* Foto Profil */
+.profile-picture-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+}
+.profile-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.profile-picture-upload {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(52, 58, 64, 0.85);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+.profile-picture-upload:hover {
+  background-color: rgba(33, 37, 41, 1);
+}
+
+/* Form Container */
+.form-section {
+  background: #212121; /* Lebih gelap untuk kontras */
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  color: #f8f9fa;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+.profile-password-container {
+  margin-bottom: 1rem;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon input {
+  padding-right: 45px; /* ruang untuk icon */
+}
+
+.profile-password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #444;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.profile-password-toggle i {
+  font-size: 1.2rem;
+}
+
+/* Kartu Informasi Akun */
+.card-header {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card-header h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.list-group-item {
+  background-color: #2c2c2c;
+  color: #f1f1f1;
+  border: none;
+  padding: 15px 20px;
+}
+.list-group-item span.text-muted {
+  color: #adb5bd !important;
+}
+.list-group-item:not(:last-child) {
+  border-bottom: 1px solid #3a3a3a;
+}
+
+/* Tombol */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004a9f;
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: white;
+}
+.login-divider:before,
+.login-divider:after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+.login-divider:before {
+  margin-right: 10px;
+}
+.login-divider:after {
+  margin-left: 10px;
+}
+.google-btn {
+  background-color: white;
+  color: #757575;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 15px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  position: relative;
+  z-index: 100;
+}
+.google-btn:hover {
+  background-color: #f5f5f5;
+}
+.google-icon {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.dropdown-menu {
+  padding: 0;
+  overflow: hidden;
+  min-width: 300px;
+  background-color: #002b5c; /* Warna biru gelap */
+  color: white;
+  border: none;
+}
+
+.dropdown-menu .card {
+  margin: 0;
+  border-radius: 0;
+  background-color: #002b5c; /* Warna biru gelap */
+  color: white;
+  border: none;
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* Header kartu */
+.card-header.bg-dark-blue {
+  background-color: #002b5c; /* Warna biru gelap */
+  color: white;
+  border-bottom: 1px solid #003366;
+}
+
+/* Styling untuk list items */
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366; /* Biru gelap lebih terang untuk kontras */
+  color: white;
+  border: none;
+}
+
+.list-group-item span.text-muted {
+  color: #cce0ff; /* Warna teks yang lebih lembut agar kontras */
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+
+/* Memastikan menu dropdown tidak tertutup saat diklik */
+.dropdown-menu.show {
+  display: block;
+}
+
+/* Label role */
+.label-danger,
+.label-info {
+  background-color: #00509e; /* Warna biru lebih terang untuk label */
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+}
